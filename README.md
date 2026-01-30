@@ -16,7 +16,7 @@ A powerful and flexible tool for testing Tor proxy connectivity with customizabl
 
 ```bash
 # Install required dependencies
-pip install aiohttp aiohttp-socks
+pip3 install aiohttp aiohttp-socks
 
 # Make the script executable
 chmod +x tor_tester.py
@@ -26,22 +26,22 @@ chmod +x tor_tester.py
 
 ```bash
 # Basic test with default settings
-python tor_tester.py --url https://example.com
+python3 tor_tester.py --url https://example.com
 
 # Test using a preset URL
-python tor_tester.py --url google
+python3 tor_tester.py --url google
 
 # Use a performance preset
-python tor_tester.py --url torproject --preset moderate
+python3 tor_tester.py --url torproject --preset moderate
 
 # Custom configuration
-python tor_tester.py --url github --concurrency 20 --delay 0.5
+python3 tor_tester.py --url github --concurrency 20 --delay 0.5
 ```
 
 ## Usage
 
 ```
-python tor_tester.py [OPTIONS]
+python3 tor_tester.py [OPTIONS]
 
 Required:
   --url URL              Target URL or preset name
@@ -89,69 +89,69 @@ Optional:
 
 ```bash
 # See all preset URLs
-python tor_tester.py --list-urls
+python3 tor_tester.py --list-urls
 
 # See all performance presets
-python tor_tester.py --list-presets
+python3 tor_tester.py --list-presets
 ```
 
 ### Basic Testing
 
 ```bash
 # Test Google with default settings
-python tor_tester.py --url google
+python3 tor_tester.py --url google
 
 # Test custom URL with moderate preset
-python tor_tester.py --url https://example.com --preset moderate
+python3 tor_tester.py --url https://example.com --preset moderate
 ```
 
 ### Custom Configurations
 
 ```bash
 # Fast testing: 30 workers, 0.2s delay
-python tor_tester.py --url torproject --concurrency 30 --delay 0.2
+python3 tor_tester.py --url torproject --concurrency 30 --delay 0.2
 
 # Limited test: 100 requests total
-python tor_tester.py --url github --max-requests 100
+python3 tor_tester.py --url github --max-requests 100
 
 # Verbose output for debugging
-python tor_tester.py --url google --verbose
+python3 tor_tester.py --url google --verbose
 ```
 
 ### Different Proxy Configurations
 
 ```bash
 # Use custom Tor port
-python tor_tester.py --url google --proxy socks5://127.0.0.1:9150
+python3 tor_tester.py --url google --proxy socks5://127.0.0.1:9150
 
 # Use HTTP proxy
-python tor_tester.py --url google --proxy http://127.0.0.1:8118
+python3 tor_tester.py --url google --proxy http://127.0.0.1:8118
 
 # Remote proxy
-python tor_tester.py --url google --proxy socks5://proxy.example.com:1080
+python3 tor_tester.py --url google --proxy socks5://proxy.example.com:1080
 ```
 
 ### Timeout Configurations
 
 ```bash
 # Fast timeout for quick testing
-python tor_tester.py --url google --connect-timeout 3 --total-timeout 5
+python3 tor_tester.py --url google --connect-timeout 3 --total-timeout 5
 
 # Patient timeout for slow connections
-python tor_tester.py --url torproject --connect-timeout 10 --total-timeout 30
+python3 tor_tester.py --url torproject --connect-timeout 10 --total-timeout 30
 ```
 
 ### Combined Examples
 
 ```bash
 # Stress test with 50 workers, no delay, 500 requests
-python tor_tester.py --url cloudflare --preset stress --max-requests 500
+python3 tor_tester.py --url cloudflare --preset stress --max-requests 500
 
 # Conservative long-running test with verbose output
-python tor_tester.py --url torproject --preset conservative --verbose
+python3 tor_tester.py --url torproject --preset conservative --verbose
 
 # Custom aggressive test with specific timeouts
-python tor_tester.py --url github \
+python3 tor_tester.py --url github \
   --concurrency 40 \
   --delay 0.1 \
   --max-requests 1000 \
