@@ -240,4 +240,5 @@ This tool is for testing your own Tor setup. Do not use it to:
 
 ## License
 
-This tool is provided as-is for legitimate testing purposes only.
+This tool is provided as-is for legitimate testing purposes only under the GNU GENERAL PUBLIC LICENSE.
+                       Version 3, 29 June 2007
