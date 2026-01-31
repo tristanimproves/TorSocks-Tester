@@ -68,7 +68,7 @@ Optional:
 | conservative | 3       | 3.0s  | Low load for sensitive testing |
 | moderate     | 10      | 1.5s  | Balanced performance           |
 | aggressive   | 25      | 0.5s  | High load testing              |
-| stress       | 50      | 0s    | Maximum load                   |
+| stress       | 50      | 0.1s  | Maximum load                   |
 
 ### Test URLs
 
