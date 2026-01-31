@@ -28,8 +28,8 @@ PRESETS = {
     },
     "stress": {
         "concurrency": 50,
-        "delay": 0,
-        "description": "Extreme load - 50 workers, no delay"
+        "delay": 0.1,
+        "description": "Extreme load - 50 workers, 0.1s delay"
     }
 }
 
