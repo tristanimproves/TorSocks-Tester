@@ -117,7 +117,7 @@ async def async_get_loop(
         print(f"║ URL:         {url[:55]:<55} ║")
         print(f"║ Proxy:       {proxy:<55} ║")
         print(f"║ Workers:     {concurrency:<55} ║")
-        print(f"║ Delay:       {delay}s{'':<52}  ║")
+        print(f"║ Delay:       {str(delay) + 's':<55} ║")
         print(f"║ Max Requests: {str(max_requests or 'Unlimited'):<54} ║")
         print(f"╚{'═' * 70}╝")
         print("\nPress Ctrl+C to stop\n")
